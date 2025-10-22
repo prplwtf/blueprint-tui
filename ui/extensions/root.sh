@@ -2,7 +2,7 @@
 
 case $(gum choose "Install" "Remove" --header="Extensions") in
   "Install")
-    export window="extensions-install-root"
+    export window="extensions-install"
   ;;
   *)
     export window="root"
