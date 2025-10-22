@@ -2,5 +2,8 @@
 ## This file contains the default configuration for blueprint-tui.
 ## To make changes, please edit the 'config/user' configuration instead.
 
+export BLUEPRINT_TUI_VERSION
+export BLUEPRINT_TUI_TARGET
+
 BLUEPRINT_TUI_VERSION="0.1"
 BLUEPRINT_TUI_TARGET="beta-2025-09"
