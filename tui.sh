@@ -5,6 +5,20 @@ BLUEPRINT_TUI_DIRECTORY=$(realpath "$(dirname "$0" 2> /dev/null)" 2> /dev/null)
 
 cd "$BLUEPRINT_TUI_DIRECTORY" || exit
 
+if ! "$(command -x gum)"; then
+  echo "gum is not installed"
+  exit 1
+fi
+
+if [[ $BLUEPRINT__DIRECTORY == "" ]]; then
+  # shellcheck disable=1091
+  source blueprint 2> /dev/null
+  if [[ $BLUEPRINT__DIRECTORY == "" ]]; then
+    gum log "Blueprint is not installed"
+    exit 1
+  fi
+fi
+
 source config/default
 first_run=0
 # shellcheck source=config/user.example

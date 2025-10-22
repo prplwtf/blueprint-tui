@@ -1,7 +1,7 @@
 #!/bin/bash
 
 case $(gum choose "Install" "Remove" --header="Extensions") in
-  Install)
+  "Install")
     export window="extensions-install-root"
   ;;
   *)

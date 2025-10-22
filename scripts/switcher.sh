@@ -9,9 +9,9 @@ while [ "$run_switcher" -eq 1 ]; do
   next_window="$window"
   window=""
 
-  if [ -f "ui/${next_window/-/\/}.sh" ]; then
+  if [ -f "ui/${next_window//-/\/}.sh" ]; then
     # shellcheck disable=SC1090
-    source "./ui/${next_window/-/\/}.sh" || run_switcher=0
+    source "./ui/${next_window//-/\/}.sh" || run_switcher=0
     clear
   else
     run_switcher=0

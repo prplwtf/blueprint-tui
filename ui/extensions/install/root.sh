@@ -1,10 +1,8 @@
 #!/bin/bash
-#
-case $(gum choose "Install" "Remove" --header="Extensions") in
-  Install)
-    export window="extensions-install"
-  ;;
-  *)
-    export window="extensions"
-  ;;
-esac
+
+choice=$(gum choose "e" --header="Install extensions")
+
+if [[ "$choice" == "" ]]; then
+  export window="extensions-root"
+  return
+fi
