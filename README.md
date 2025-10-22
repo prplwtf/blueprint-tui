@@ -68,3 +68,8 @@ You can now run blueprint-tui. It will automatically detect your Blueprint insta
 ```bash
 blueprint-tui
 ```
+
+## ok cool, how does it look
+
+https://github.com/user-attachments/assets/b6dfbb9f-1070-4c64-b284-1ce41842bd52
+
