@@ -5,7 +5,7 @@ BLUEPRINT_TUI_DIRECTORY=$(realpath "$(dirname "$0" 2> /dev/null)" 2> /dev/null)
 
 cd "$BLUEPRINT_TUI_DIRECTORY" || exit
 
-if ! "$(command -x gum)"; then
+if ! "$(command -v gum)"; then
   echo "gum is not installed"
   exit 1
 fi
