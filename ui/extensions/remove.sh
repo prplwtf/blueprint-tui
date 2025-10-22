@@ -28,7 +28,7 @@ fi
 # shellcheck disable=2086
 USER_CONFIRMED_REMOVAL="yes" blueprint -remove $choice
 
-echo -e "\n"
+echo
 gum log -l "info" "Press ENTER to continue"
 read -r
 

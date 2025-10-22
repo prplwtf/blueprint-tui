@@ -23,7 +23,7 @@ fi
 # shellcheck disable=2086
 blueprint -install $choice
 
-echo -e "\n"
+echo
 gum log -l "info" "Press ENTER to continue"
 read -r
 
