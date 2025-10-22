@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export window
-window="menu"
+window="root"
 run_switcher=1
 
 # shellcheck disable=SC2154
@@ -9,12 +9,16 @@ while [ "$run_switcher" -eq 1 ]; do
   next_window="$window"
   window=""
 
-  case "$next_window" in
-    menu)
-      source ./ui/menu.sh
-    ;;
-    *)
-      run_switcher=0
-    ;;
-  esac
+  if [ -f "ui/${next_window/-/\/}.sh" ]; then
+    # shellcheck disable=SC1090
+    source "./ui/${next_window/-/\/}.sh" || run_switcher=0
+    clear
+  else
+    run_switcher=0
+  fi
+
+  if [[ $next_window == "" ]]; then
+    run_switcher=0
+  fi
+
 done
